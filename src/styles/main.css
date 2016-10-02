@@ -1,0 +1,14 @@
+.note {
+    width: 200px;
+    height: auto;
+    background-color: #2aabd2;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+}
+
+.note button {
+    float: right;
+    margin: 2px 10px 2px 2px;
+}
