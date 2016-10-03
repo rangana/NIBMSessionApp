@@ -12,7 +12,7 @@
     }]);
 
     /*
-     http service consuming service declartion
+     http service consuming service declaration
      */
     app.service('dataConsumerService', function () {
 
