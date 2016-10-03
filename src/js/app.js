@@ -9,6 +9,21 @@
      */
     app.controller('mainController', ["$scope", "dataConsumerService", function ($scope, dataConsumerService) {
         $scope.notes = dataConsumerService.getNotes();
+
+        $scope.addNewNote = function () {
+            alert("Add New Note");
+        };
+
+        $scope.editNote = function (noteData) {
+            alert("Edit Note");
+            console.log(noteData);
+        };
+
+        $scope.deleteNote = function (noteData) {
+            alert("Delete Note");
+            console.log(noteData);
+        };
+
     }]);
 
     /*
