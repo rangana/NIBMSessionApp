@@ -7,14 +7,14 @@
     /*
      main controller declaration
      */
-    app.controller('mainController', ["$scope", "httpConsumerService", function ($scope, httpConsumerService) {
-        $scope.notes = httpConsumerService.getNotes();
+    app.controller('mainController', ["$scope", "dataConsumerService", function ($scope, dataConsumerService) {
+        $scope.notes = dataConsumerService.getNotes();
     }]);
 
     /*
      http service consuming service declartion
      */
-    app.service('httpConsumerService', function () {
+    app.service('dataConsumerService', function () {
 
         var notes = [
             {
@@ -75,29 +75,29 @@
             }
         ];
 
-        var httpConsumerService = {};
+        var dataConsumerService = {};
 
-        httpConsumerService.getNotes = function () {
+        dataConsumerService.getNotes = function () {
             return notes;
         };
 
-        httpConsumerService.addNotes = function (note) {
+        dataConsumerService.addNotes = function (note) {
             notes.push(note);
         };
 
-        httpConsumerService.deleteNote = function (noteId) {
+        dataConsumerService.deleteNote = function (noteId) {
             /*
              logic to delete the note with given ID
              */
         };
 
-        httpConsumerService.changeNote = function (noteId, newNote) {
+        dataConsumerService.changeNote = function (noteId, newNote) {
             /*
              logic to change the note with given noteId
              */
         };
 
-        return httpConsumerService;
+        return dataConsumerService;
     });
 
 })();
