@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-cloak>
 <head>
     <meta charset="UTF-8">
     <title>NIBM Technology Session</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 <body ng-controller="mainController">
@@ -23,7 +20,7 @@
         <h4 class="panel-heading">{{note.topic}}</h4>
         <p class="description panel-body">{{note.description}}</p>
         <div class="panel-footer">
-            <p class="dateTime">{{note.date}} : {{note.time}}</p>
+            <p class="dateTime">{{note.date}} - {{note.time}}</p>
             <div class="row">
                 <button aria-label="Delete Note" class="btn btn-danger" ng-click="deleteNote(note)"><i
                         class="glyphicon glyphicon-remove"></i>
@@ -36,5 +33,31 @@
     </div>
 
 </div>
+
+<!-- modal window definition-->
+<script type="text/ng-template" id="myTestModal.tmpl.html">
+    <div class="modal-header">
+        <h3>Add a new note</h3>
+    </div>
+
+    <div class="modal-body">
+        <input type="text" placeholder="Enter the Title" ng-model="note.title">
+        <textarea placeholder="Enter the Note" ng-model="note.desc"></textarea>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close
+        </button>
+        <button type="button" class="btn btn-primary" ng-click="saveNote()">Save Note
+        </button>
+    </div>
+</script>
+
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
 </body>
 </html>
