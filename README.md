@@ -20,6 +20,6 @@ There are two ways to get started with the CODE
     > ex: https://www.npmjs.com/package/http-server 
 
 load the web application using 
->` http:// <server url>/<folder path>/index.html `
+>` http:// <server url>/<folder path>/src/index.html `
 
 
