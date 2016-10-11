@@ -20,7 +20,8 @@
         <h4 class="panel-heading">{{note.topic}}</h4>
         <p class="description panel-body">{{note.description}}</p>
         <div class="panel-footer">
-            <p class="dateTime">{{note.date}} - {{note.time}}</p>
+            <p class="dateTime">created : {{note.createdAt | date:'yyyy-MM-dd HH:mm'}}</p>
+            <p class="dateTime">modified: {{note.updatedAt | date:'yyyy-MM-dd HH:mm'}}</p>
             <div class="row">
                 <button aria-label="Delete Note" class="btn btn-danger" ng-click="deleteNote(note)"><i
                         class="glyphicon glyphicon-remove"></i>

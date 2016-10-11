@@ -8,8 +8,8 @@ h4 {
 }
 
 .note {
-    width: 200px;
-    height: 280px;
+    width: 250px;
+    height: 320px;
     background-color: #2aabd2;
     padding: 10px;
     margin-left: 20px;
@@ -43,7 +43,7 @@ h4 {
     width: 100%;
 }
 
-.modal-body textarea{
+.modal-body textarea {
     margin-top: 10px;
     float: left;
     width: 100%;
